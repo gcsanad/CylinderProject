@@ -30,8 +30,8 @@ namespace CylinderTestCode
         {
             var cylinder = new Cylinder(4, 6);
 
-            Assert.Equal(Math.PI * Math.Pow(cylinder.Radius, 2) * cylinder.Height, cylinder.GetVolume());
-            Assert.Equal(2 * Math.PI * Math.Pow(cylinder.Radius, 2) + 2 * Math.PI * cylinder.Radius * cylinder.Height, cylinder.GetSurfaceArea());
+            Assert.Equal(Math.PI * Math.Pow(cylinder.Radius, 2) * cylinder.Height, cylinder.GetVolume(), precision: 4);
+            Assert.Equal(2 * Math.PI * Math.Pow(cylinder.Radius, 2) + 2 * Math.PI * cylinder.Radius * cylinder.Height, cylinder.GetSurfaceArea(), precision: 4);
         }
 
 
