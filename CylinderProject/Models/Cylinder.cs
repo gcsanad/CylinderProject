@@ -11,6 +11,8 @@ namespace CylinderProject.Models
 
         private double _radius, _height;
 
+        
+
         public Cylinder(double radius, double height)
         {
             if (radius <= 0)
@@ -29,12 +31,12 @@ namespace CylinderProject.Models
 
         public double GetVolume()
         {
-            return Math.PI * Math.Pow(_radius, 2) * _height;
+            return Math.PI * Math.Pow(Radius, 2) * Height;
         }
 
         public double GetSurfaceArea()
         {
-            return 2 * Math.PI * Math.Pow(_radius, 2) + 2 * Math.PI * _radius * _height;
+            return 2 * Math.PI * Math.Pow(Radius, 2) + 2 * Math.PI * Radius * Height;
         }
 
         public void Resize(double newRadius, double newHeight)
@@ -47,5 +49,8 @@ namespace CylinderProject.Models
             _radius = newRadius;
             _height = newHeight;
         }
+
+        public double Radius { get => _radius;}
+        public double Height { get => _height;}
     }
 }
